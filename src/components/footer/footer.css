@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+.footer{
+    display: flex;
+    height: 149px;
+    width: 1110px;
+    padding: 0;
+    margin: auto;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 30px 30px 0px 0px;
+}
+.footer .title-site{
+    padding-top: 29px;
+    padding-left: 29px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #101010;
+    margin-right:223px;
+    text-decoration: none;
+}
+
+.link-nav{
+    text-decoration: none;
+}
+
+.other-pages{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.favourites{
+    margin-top: 34px;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+}
+.cart{
+    margin-top: 11px;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+}
+.contacts{
+    margin-top: 10px;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.service-footer{
+    width:160px;
+    display: block;
+    padding-top: 35px;
+    margin-left: 174px;
+}
+.language{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.terms-service{
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.rus-language{
+    margin-left: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: none;
+    color: #FFA542;
+}
+.eng-language{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #101010;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.social-networks{
+    height: 30px;
+    width: 129px;
+    margin-left: 183px;
+    margin-top: 29px;
+    display: flex;
+    align-items: center;
+}
+
+.social-networks .vk{
+    margin-right:18px;
+}
+
+.social-networks .tg{
+    margin-right:18px;
+}

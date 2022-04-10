@@ -1,17 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux';
+import {BrowserRouter as Router} from 'react-router-dom';
+
+import App from './components/app';
+import ErrorBoundry from './components/error-boundry';
+import HeadphonesStoreService from './services/headphones-store';
+import {HeadphonesServiceProvider} from './components/headphones-service-context';
+import store from './store';
+ 
+
+const headphonesService = new HeadphonesStoreService();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Provider store = {store}>
+        <ErrorBoundry>
+            <HeadphonesServiceProvider value= {headphonesService}>
+                <Router>
+                    <App />
+                </Router>
+            </HeadphonesServiceProvider>
+        </ErrorBoundry>
+    </Provider>,
+    document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
