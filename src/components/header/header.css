@@ -69,6 +69,13 @@
     left: -8px;
     top: -12px
 }
+
+.button-cart-count-active{
+    z-index: 1;
+    left: -8px;
+    top: -12px;
+}
+
 .header-cart span{
     position: relative;
     text-decoration: none;

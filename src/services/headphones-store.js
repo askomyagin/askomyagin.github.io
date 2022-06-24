@@ -93,7 +93,9 @@ export default class HeadphonesStoreService{
         }, 
     ];
 
+
     getHeadphones = async () => {
         return this.data;
-    };
+    }
+
 };

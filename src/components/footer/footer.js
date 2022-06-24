@@ -16,16 +16,20 @@ const Footer = () => {
       </Link>
         
         <div className='other-pages'>
-            <a className='favourites' href='#'>Избранное</a>
-            <a className='cart' href='#'>Корзина</a>
-            <a className='contacts' href='#'>Контакты</a>
+          <Link to={'/favorite'} style={{ textDecoration: 'none' }}>
+            <div className='favourites'>Избранное</div>
+          </Link>
+          <Link to={'/cart'} style={{ textDecoration: 'none' }}>
+            <div className='cart'>Корзина</div>
+          </Link>
+            <div className='contacts' href='#'>Контакты</div>
         </div>
         <div className='service-footer'> 
-          <a className='terms-service' href='#'>Условия сервиса</a>
+          <div className='terms-service' href='#'>Условия сервиса</div>
           <div className='language'>
             <img src={language}/>
-            <a className='rus-language' href='#'>Рус</a>
-            <a className='eng-language' href='#'>Eng</a>
+            <div className='rus-language' href='#'>Рус</div>
+            <div className='eng-language' href='#'>Eng</div>
           </div>
         </div>
         <div className='social-networks'>

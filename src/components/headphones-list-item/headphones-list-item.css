@@ -124,3 +124,10 @@ button.buy{
     line-height: 21px;
     color: #010101;
 }
+
+.favorite{
+    cursor: pointer;
+    background-color: #FFFFFF;;
+    outline:none;
+    border:none; 
+}

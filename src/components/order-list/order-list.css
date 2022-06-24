@@ -1,0 +1,185 @@
+.order-list{
+    width: 1110px;
+    margin: auto;
+    min-height:calc(100vh - 149px - 60px);
+}
+
+.order-list-title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #1C1C27;
+    height: 30px;
+    width: 500px;
+}
+
+.order-list-body{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1110px;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.title-order-item{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1C1C27;
+}
+
+.order-fields{
+    width: 500px;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.order-field{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1C1C27;
+    margin-bottom: 15px;
+}
+
+.order-field:not(.order-delivery) input{
+    width: 200px;
+    height: 25px;
+  }
+
+.order-field input{
+  border: 1px solid #9f9d9d;
+  border-radius: 0.15rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.order-field input::placeholder {
+    color: #212529;
+    opacity: 0.4;
+  }
+
+.order-field:not(.order-delivery) input:focus{
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+  }
+
+.order-delivery-item-label {
+    margin-right: 15px;
+    line-height: 32px;
+  }
+  
+.order-delivery-item-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+  
+    position: relative;
+    top: 4px;
+  }
+  
+ .order-delivery-item-input:checked {
+    border: 6px solid black;
+  }
+  
+  .order-shop-cart{
+    width: 530px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .order-comment textarea{
+    resize: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .order-field textarea:focus{
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+  }
+
+  .order-shop-card{
+    display: flex;
+    flex-wrap: wrap;
+    width: 510px;
+    height: 150px;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+
+  .order-card-image{
+    margin-left: 10px;
+    margin-top:5px;
+  }
+
+  .order-shop-info-item{
+    display: block;
+    width: 300px;
+    height: 90px;
+    margin-top: 15px;
+    margin-left: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1C1C27;
+  }
+
+  .oder-shop-price-item{
+    margin-top: 20px;
+  }
+
+  .order-shop-total-item{
+      margin-top: 12px;
+      float:right;
+  }
+
+  .button-order{
+    cursor: pointer;
+    margin-top: 15px;
+    width: 350px;
+    height: 55px;
+    background: #101010;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
+
+  .text-button-order{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .button-container{
+      display: flex;
+      justify-content: center;
+  }

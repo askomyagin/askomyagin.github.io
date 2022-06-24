@@ -1,7 +1,7 @@
 import React from "react";
 import './headphones-list-item.css';
 
-const HeadphonesListItem = ({ headphone, onAddedToCart }) => {
+const HeadphonesListItem = ({ headphone, onAddedToCart, onAddedToFavorite, favoriteFlag, onDeleteToFavorite}) => {
     const { img, title, discount, oldprice, price, rate } = headphone;
 
     function makePrice(price) {
@@ -28,6 +28,25 @@ const HeadphonesListItem = ({ headphone, onAddedToCart }) => {
 
     const oldprice_new = makePrice(oldprice);
     const discount_new = makeDiscount(discount);
+
+    const renderFavorite = (favoriteFlag) => {
+        if(favoriteFlag){
+            return(
+                <button className="favorite" type="submit" onClick={onDeleteToFavorite}>
+                    <div className={'favorite-flag-true'}>
+                    <img src={images['icon_favourites_true.png']}/>
+                    </div>
+                </button>
+            )
+        }
+        return(
+            <button className="favorite" type="submit" onClick={onAddedToFavorite}>
+                <div className={'favorite-flag-false'}>
+                    <img src={images['icon_favourites.png']}/>
+                </div>
+            </button>
+        )
+    }
 
     return (
         <div className="headphone-list-item">
@@ -58,6 +77,7 @@ const HeadphonesListItem = ({ headphone, onAddedToCart }) => {
                     </div>
                 </div>
                 <div className="button-buy">
+                    {renderFavorite(favoriteFlag)}
                     <button className="buy" type="submit" onClick={onAddedToCart}>
                         <span>Купить</span>   
                     </button>

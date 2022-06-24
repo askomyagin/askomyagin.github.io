@@ -8,7 +8,6 @@ import ErrorBoundry from './components/error-boundry';
 import HeadphonesStoreService from './services/headphones-store';
 import {HeadphonesServiceProvider} from './components/headphones-service-context';
 import store from './store';
- 
 
 const headphonesService = new HeadphonesStoreService();
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './shopping-cart-table.css';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,7 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
     return images;
   }
   const images = importAll(require.context('/src/image', false, /\.(png|jpe?g|svg)$/));
+  const [emptyShopOrder, setEmptyShopOrder] = useState(false); 
 
   const renderCard = (item, idx) => {
     const { id, title, count, img, price, total } = item;
@@ -57,7 +58,7 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
     <div className="shopping-cart">
       <div className='shop-title-cart'>Корзина</div>
       <div className='shop-card-and-total'>
-        <div className='thing-in-cart'>
+        <div className='thing-in-favorite'>
           {
             items.length > 0 ?
               <div>
@@ -92,11 +93,30 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
             ₽ {total}
           </div>
           
-          <button className='place-order'>
-            <div className='text-place-order'>
-              Перейти к оформлению
+          {
+            items.length > 0 ? 
+            <Link to={'/order'}>
+              <button className='place-order'>
+                <div className='text-place-order'>
+                  Перейти к оформлению
+                </div>
+              </button>
+            </Link>
+            :
+            <div>
+              <button className='place-order'  onClick={() => setEmptyShopOrder(true)}>
+                <div className='text-place-order'>
+                  Перейти к оформлению
+                </div>
+              </button>
+              {
+                emptyShopOrder && <div className='empty-shop-order'>
+                  В корзине пока нет предметов!
+                </div>
+              }
             </div>
-          </button>
+          
+          }
         </div>
       </div>
 

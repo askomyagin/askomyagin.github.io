@@ -34,16 +34,30 @@ const headphonesAddedToCart = (headphonesId) => {
     };
 };
 
-const headphonesRemovedFromCart = (headphonesId) => {
+const headphonesRemovedFromCart = (headphoneId) => {
     return{
         type: 'HEADPHONES_REMOVED_FROM_CART',
-        payload: headphonesId
+        payload: headphoneId
     };
 };
 
-const allHeadphonesRemovedFromCart = (headphonesId) => {
+const allHeadphonesRemovedFromCart = (headphoneId) => {
     return{
         type: 'ALL_HEADPHONES_REMOVED_FROM_CART',
+        payload: headphoneId
+    };
+};
+
+const headphonesAddedToFavorite = (headphoneId) => {
+    return{
+        type: 'HEADPHONES_ADDED_TO_FAVORITE',
+        payload: headphoneId
+    };
+};
+
+const headphonesRemovedFromFavorite = (headphonesId) => {
+    return{
+        type: 'HEADPHONES_REMOVED_FROM_FAVORITE',
         payload: headphonesId
     };
 };
@@ -52,5 +66,7 @@ export {
     fetchHeadphones,
     headphonesAddedToCart,
     headphonesRemovedFromCart,
-    allHeadphonesRemovedFromCart
+    allHeadphonesRemovedFromCart,
+    headphonesAddedToFavorite,
+    headphonesRemovedFromFavorite
 };

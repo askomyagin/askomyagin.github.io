@@ -3,7 +3,7 @@ import './header.css';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-const Header = ({count}) => {
+const Header = ({count_shop, favoriteItems}) => {
 
   function importAll(r) {
     let images = {};
@@ -11,6 +11,7 @@ const Header = ({count}) => {
     return images;
   }
   const images = importAll(require.context('/src/image', false, /\.(png|jpe?g|svg)$/));
+  const favoriteCount = favoriteItems.map((item) => item.id).length;
 
   return (
     <div className="header">
@@ -21,17 +22,15 @@ const Header = ({count}) => {
         </Link>
         <div className='buttons-header'>
           <div className='header-favourites'>
-            <Link to={''} style={{ textDecoration: 'none' }}>
+            <Link to={'/favorite'} style={{ textDecoration: 'none' }}>
               <img src={images['icon_favourites.png']} className='button-favourites'/>
-              <img src={images['ellipse_for_header.png']} className='button-favourites-count'/>
-              <span className='button-favourites-count-number'>2</span>
+              <img src={`${favoriteCount === 0 ? images['ellipse_for_header.png'] : images['ellipse_for_header_active.png']}`} className='button-favourites-count'/>
             </Link>
           </div>
           <div className='header-cart'>
             <Link to={'/cart'} style={{ textDecoration: 'none' }}>
               <img src={images['icon_cart.png']} className='button-cart'/>
-              <img src={images['ellipse_for_header.png']} className='button-cart-count'/>
-              <span className='button-cart-count-number'>{count}</span>
+              <img src={`${count_shop === 0 ? images['ellipse_for_header.png'] : images['ellipse_for_header_active.png']}`} className={'button-cart-count'}/>
             </Link>
           </div>
         </div>
@@ -39,9 +38,10 @@ const Header = ({count}) => {
   );
 };
 
-const mapStateToProps = ({ shoppingCart: { count} }) => {
+const mapStateToProps = ({ shoppingCart: { count}, favoriteCart: {favoriteItems}}) => {
   return {
-    count: count
+    count_shop: count,
+    favoriteItems: favoriteItems
   };
 };
 

@@ -21,7 +21,6 @@
     font-size: 20px;
     line-height: 24px;
     color: #838383;
-    margin-bottom: px;
 }
 
 .headphones-list i:not(:nth-child(3n)){
@@ -30,4 +29,12 @@
 
 .headphones-list i{
     margin-bottom: 30.65px;
+}
+
+.spinner-container{
+    width: 1110px;
+    margin: auto;       
+    display: flex;
+    align-items: center;             
+    min-height:calc(100vh - 149px - 60px);
 }

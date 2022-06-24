@@ -1,19 +1,19 @@
 import React from 'react';
 import './main-page.css';
-import HeadphonesList from '../headphones-list';
 import Footer from '../footer/footer';
 import Header from '../header/header';
+import OrderList from '../order-list';
 
-const MainPage = () => {
+const OrderPage = () => {
 
   return (
     <div className='main-page'>
       <Header />
-      <HeadphonesList />
+        <OrderList />
       <Footer />
     </div>
     
   );
 };
 
-export default MainPage;
+export default OrderPage;
