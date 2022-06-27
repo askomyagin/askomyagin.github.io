@@ -20,7 +20,8 @@
 }
 
 .headphone-title{
-    width: 150px;
+    width: 170px;
+    min-height: 60px;
     float:left;
     margin-left:22px;
     font-family: 'Montserrat';
@@ -69,7 +70,7 @@
 }
 
 .headphone-old-price{
-    width: 250px;
+    width: 130px;
     text-align: right;
     float: right;
     margin-right: 21px;
@@ -84,10 +85,10 @@
 }
 
 .headphone-rate{
+    width: 200px;
     margin-left:22px;
     float: left;
     display: flex;
-    margin-top: 25px;
 }
 
 .headphone-vector{
@@ -109,7 +110,6 @@
 .button-buy{
     outline:none;
     float: right;
-    margin-top:16px;
     margin-right:18px;
 }
 button.buy{
