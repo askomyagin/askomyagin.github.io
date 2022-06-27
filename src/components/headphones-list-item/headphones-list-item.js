@@ -51,7 +51,7 @@ const HeadphonesListItem = ({ headphone, onAddedToCart, onAddedToFavorite, favor
     return (
         <div className="headphone-list-item">
             <div className="headphone-image">
-                <img src={images[img]} />
+                <img src={images[img]}/>
             </div>
             <div className="information-sale">
                 <div className="headphone-title">

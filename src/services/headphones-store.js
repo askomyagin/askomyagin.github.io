@@ -53,12 +53,12 @@ export default class HeadphonesStoreService{
         }, 
         {
             id:6,
-            img: "apple_earpods_in_case.png",
-            title: 'Apple EarPods',
+            img: "Samsung-HS130-Blue.png",
+            title: 'Samsung HS130',
             oldprice: '',
-            discount: '',
-            price: 2327,
-            rate: 4.5,
+            discount: '15',
+            price: 5999,
+            rate: 4.3,
             type: 'wired'
         }, 
         {
@@ -91,6 +91,16 @@ export default class HeadphonesStoreService{
             rate: 4.7,
             type: 'wireless'
         }, 
+        {
+            id: 10,
+            img: 'samsung-galaxy-buds.png',
+            title: 'Galaxy Buds2',
+            oldprice: 6999,
+            discount: '',
+            price: 5599,
+            rate: 4.8,
+            type:'wireless'
+        }
     ];
 
 
