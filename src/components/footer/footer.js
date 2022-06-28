@@ -27,15 +27,15 @@ const Footer = () => {
         <div className='service-footer'> 
           <div className='terms-service' href='#'>Условия сервиса</div>
           <div className='language'>
-            <img src={language}/>
+            <img src={language} alt={'language'}/>
             <div className='rus-language' href='#'>Рус</div>
             <div className='eng-language' href='#'>Eng</div>
           </div>
         </div>
         <div className='social-networks'>
-          <img className='vk' src={vk}/>
-          <img className='tg' src={tg}/>
-          <img className='wt' src={wt}/>
+          <img className='vk' src={vk} alt={'vk'}/>
+          <img className='tg' src={tg} alt={'tg'}/>
+          <img className='wt' src={wt} alt={'wt'}/>
         </div>
 
     </div>

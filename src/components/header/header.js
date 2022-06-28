@@ -7,9 +7,10 @@ const Header = ({count_shop, favoriteItems}) => {
 
   function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    r.keys().map((item) => images[item.replace('./', '')] = r(item) );
     return images;
   }
+  
   const images = importAll(require.context('/src/image', false, /\.(png|jpe?g|svg)$/));
   const favoriteCount = favoriteItems.map((item) => item.id).length;
 
@@ -23,14 +24,14 @@ const Header = ({count_shop, favoriteItems}) => {
         <div className='buttons-header'>
           <div className='header-favourites'>
             <Link to={'/favorite'} style={{ textDecoration: 'none' }}>
-              <img src={images['icon_favourites.png']} className='button-favourites'/>
-              <img src={`${favoriteCount === 0 ? images['ellipse_for_header.png'] : images['ellipse_for_header_active.png']}`} className='button-favourites-count'/>
+              <img src={images['icon_favourites.png']} alt={'icon_favourites'} className='button-favourites'/>
+              <img src={`${favoriteCount === 0 ? images['ellipse_for_header.png'] : images['ellipse_for_header_active.png']}`} alt={'ellipse_for_header'} className='button-favourites-count'/>
             </Link>
           </div>
           <div className='header-cart'>
             <Link to={'/cart'} style={{ textDecoration: 'none' }}>
-              <img src={images['icon_cart.png']} className='button-cart'/>
-              <img src={`${count_shop === 0 ? images['ellipse_for_header.png'] : images['ellipse_for_header_active.png']}`} className={'button-cart-count'}/>
+              <img src={images['icon_cart.png']} alt={'icon_cart'} className='button-cart'/>
+              <img src={`${count_shop === 0 ? images['ellipse_for_header.png'] : images['ellipse_for_header_active.png']}`} alt={'ellipse_for_header'} className={'button-cart-count'}/>
             </Link>
           </div>
         </div>

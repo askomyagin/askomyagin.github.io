@@ -76,8 +76,6 @@ const updateCartItem = (headphone, item={}, quantity) => {
     const {
         id = headphone.id, 
         count = 0, 
-        img = '',
-        price = 0,
         title = headphone.title, 
         total = 0} = item;
 

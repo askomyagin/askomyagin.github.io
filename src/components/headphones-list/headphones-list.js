@@ -20,56 +20,52 @@ const HeadphonesList = ({ headphones, onAddedToCart, onAddedToFavorite, favorite
             <div className="type-headphones">Наушники</div>
             <div className="headphones-list">
                 {
-                    headphones.map((headphone) => {
-                        if (headphone.type == 'wired') {
+                    headphones
+                    .filter(headphone => headphone.type === 'wired')
+                    .map((headphone) => {
+                        favoriteFlag = false;
+                        
+                        if (favoriteId.includes(headphone.id)){
+                            favoriteFlag = true;
+                        }
 
-                            favoriteFlag = false;
-                            
-                            if (favoriteId.includes(headphone.id)){
-                                favoriteFlag = true;
-                            }
-
-                            return (
-                                <i key={headphone.id}>
-                                    <HeadphonesListItem
-                                        headphone={headphone}
-                                        onAddedToCart={() => onAddedToCart(headphone.id)}
-                                        onAddedToFavorite={()=> onAddedToFavorite(headphone.id)}
-                                        favoriteFlag = {favoriteFlag}
-                                        onDeleteToFavorite={()=>onDeleteToFavorite(headphone.id)}
-                                    />
-                                </i>
-                            );
-                        };
-
+                        return (
+                            <i key={headphone.id}>
+                                <HeadphonesListItem
+                                    headphone={headphone}
+                                    onAddedToCart={() => onAddedToCart(headphone.id)}
+                                    onAddedToFavorite={()=> onAddedToFavorite(headphone.id)}
+                                    favoriteFlag = {favoriteFlag}
+                                    onDeleteToFavorite={()=>onDeleteToFavorite(headphone.id)}
+                                />
+                            </i>
+                        );
                     })
                 }
             </div>
             <div className="type-headphones">Беспроводные наушники</div>
             <div className="headphones-list">
                 {
-                    headphones.map((headphone) => {
-                        if (headphone.type == 'wireless') {
+                    headphones
+                    .filter(headphone => headphone.type === 'wireless')
+                    .map((headphone) => {
+                        favoriteFlag = false;
+                        
+                        if (favoriteId.includes(headphone.id)){
+                            favoriteFlag = true;
+                        }
 
-                            favoriteFlag = false;
-                            
-                            if (favoriteId.includes(headphone.id)){
-                                favoriteFlag = true;
-                            }
-
-                            return (
-                                <i key={headphone.id}>
-                                    <HeadphonesListItem
-                                        headphone={headphone}
-                                        onAddedToCart={() => onAddedToCart(headphone.id)}
-                                        onAddedToFavorite={()=> onAddedToFavorite(headphone.id)}
-                                        favoriteFlag = {favoriteFlag}
-                                        onDeleteToFavorite={()=>onDeleteToFavorite(headphone.id)}
-                                    />
-                                </i>
-                            );
-                        };
-
+                        return (
+                            <i key={headphone.id}>
+                                <HeadphonesListItem
+                                    headphone={headphone}
+                                    onAddedToCart={() => onAddedToCart(headphone.id)}
+                                    onAddedToFavorite={()=> onAddedToFavorite(headphone.id)}
+                                    favoriteFlag = {favoriteFlag}
+                                    onDeleteToFavorite={()=>onDeleteToFavorite(headphone.id)}
+                                />
+                            </i>
+                        );
                     })
                 }
             </div>

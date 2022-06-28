@@ -61,7 +61,6 @@ const updateFavoriteCartItem = (headphone, item={}, quantity) => {
     const {
         id = headphone.id, 
         count = 0, 
-        img = '',
         title = headphone.title} = item;
     
     if (count === 1 && quantity === 1){
@@ -70,7 +69,7 @@ const updateFavoriteCartItem = (headphone, item={}, quantity) => {
             title,
             img: headphone.img,
             oldprice: headphone.oldprice,
-            discount: headphone. discount,
+            discount: headphone.discount,
             price: headphone.price,
             rate: headphone.rate,
             count: count,
@@ -82,7 +81,7 @@ const updateFavoriteCartItem = (headphone, item={}, quantity) => {
         title,
         img: headphone.img,
         oldprice: headphone.oldprice,
-        discount: headphone. discount,
+        discount: headphone.discount,
         price: headphone.price,
         rate: headphone.rate,
         count: count + quantity,

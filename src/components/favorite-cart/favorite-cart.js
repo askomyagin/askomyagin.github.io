@@ -1,5 +1,5 @@
 import React from "react";
-import { headphonesAddedToFavorite, headphonesRemovedFromFavorite, headphonesAddedToCart } from "../../actions";
+import { headphonesRemovedFromFavorite, headphonesAddedToCart } from "../../actions";
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './favorite-cart.css';
@@ -7,26 +7,25 @@ import './favorite-cart.css';
 
 const FavoriteCart = ({items, onDeleteFromFavorite, onAddedToCart}) => {
 
-    function importAll(r) {
-        let images = {};
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-        return images;
-        }
+  function importAll(r) {
+    let images = {};
+    r.keys().map((item) => images[item.replace('./', '')] = r(item) );
+    return images;
+  }
         
     const images = importAll(require.context('/src/image', false, /\.(png|jpe?g|svg)$/));
-    console.log(items);
 
   const renderFavoriteCard = (item) => {
 
     function makePrice(price) {
-      if (price != '') {
+      if (price !== '') {
           price += '₽'
       }
       return price;
   }
 
   function makeDiscount(discount) {
-      if (discount != '') {
+      if (discount !== '') {
           discount = '-' + discount + '%'
       }
       return discount;
@@ -39,7 +38,7 @@ const FavoriteCart = ({items, onDeleteFromFavorite, onAddedToCart}) => {
   return (
     <div className='favorite-card'>
       <div className="headphone-favorite-cart-image">
-        <img src={images[img]} />
+        <img src={images[img]} alt={img}/>
       </div>
       <div className="description-favorite-cart-item">
         <div className="title-favorite-item">
@@ -77,7 +76,7 @@ const FavoriteCart = ({items, onDeleteFromFavorite, onAddedToCart}) => {
         </div>      
       </div>
       <div className='button-delete'>
-        <img src={images['Button_Delete.png']} width='20px' height='17px' onClick={() => onDeleteFromFavorite(id)}/>
+        <img src={images['Button_Delete.png']} alt={'Button_Delete'} width='20px' height='17px' onClick={() => onDeleteFromFavorite(id)}/>
       </div>
     </div>
     )

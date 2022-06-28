@@ -5,14 +5,14 @@ const HeadphonesListItem = ({ headphone, onAddedToCart, onAddedToFavorite, favor
     const { img, title, discount, oldprice, price, rate } = headphone;
 
     function makePrice(price) {
-        if (price != '') {
+        if (price !== '') {
             price += '₽'
         }
         return price;
     }
 
     function makeDiscount(discount) {
-        if (discount != '') {
+        if (discount !== '') {
             discount = '-' + discount + '%'
         }
         return discount;
@@ -20,9 +20,9 @@ const HeadphonesListItem = ({ headphone, onAddedToCart, onAddedToFavorite, favor
 
     function importAll(r) {
         let images = {};
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+        r.keys().map((item) => images[item.replace('./', '')] = r(item) );
         return images;
-    }
+      }
 
     const images = importAll(require.context('/src/image', false, /\.(png|jpe?g|svg)$/));
 
@@ -34,7 +34,7 @@ const HeadphonesListItem = ({ headphone, onAddedToCart, onAddedToFavorite, favor
             return(
                 <button className="favorite" type="submit" onClick={onDeleteToFavorite}>
                     <div className={'favorite-flag-true'}>
-                    <img src={images['icon_favourites_true.png']}/>
+                    <img src={images['icon_favourites_true.png']} alt={'icon_favourites_true'}/>
                     </div>
                 </button>
             )
@@ -42,7 +42,7 @@ const HeadphonesListItem = ({ headphone, onAddedToCart, onAddedToFavorite, favor
         return(
             <button className="favorite" type="submit" onClick={onAddedToFavorite}>
                 <div className={'favorite-flag-false'}>
-                    <img src={images['icon_favourites.png']}/>
+                    <img src={images['icon_favourites.png']}  alt={'icon_favourites'}/>
                 </div>
             </button>
         )
@@ -51,7 +51,7 @@ const HeadphonesListItem = ({ headphone, onAddedToCart, onAddedToFavorite, favor
     return (
         <div className="headphone-list-item">
             <div className="headphone-image">
-                <img src={images[img]}/>
+                <img src={images[img]} alt={img}/>
             </div>
             <div className="information-sale">
                 <div className="headphone-title">
