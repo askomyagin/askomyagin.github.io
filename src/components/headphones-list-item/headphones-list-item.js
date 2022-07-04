@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './headphones-list-item.css';
 
 const HeadphonesListItem = ({ headphone, onAddedToCart, onAddedToFavorite, favoriteFlag, onDeleteToFavorite}) => {
-    const { img, title, discount, oldprice, price, rate } = headphone;
+    const { id, img, title, discount, oldprice, price, rate } = headphone;
 
     function makePrice(price) {
         if (price !== '') {
@@ -54,9 +55,11 @@ const HeadphonesListItem = ({ headphone, onAddedToCart, onAddedToFavorite, favor
                 <img src={images[img]} alt={img}/>
             </div>
             <div className="information-sale">
-                <div className="headphone-title">
-                    {title}
-                </div>
+                <Link to={`/description/${id}/`}>
+                    <div className="headphone-title">
+                        {title}
+                    </div>
+                </Link>
                 {
                     discount_new && <div className="headphone-discount">
                         {discount_new}

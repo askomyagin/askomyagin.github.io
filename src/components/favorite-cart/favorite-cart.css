@@ -106,6 +106,12 @@
   color: #1C1C27;
   text-align: center;
   margin-top: 40px;
+  text-decoration: none;
+}
+
+.title-favorite-item:hover{
+  color: #838383;
+  text-decoration: underline;
 }
 
 .headphone-favorite-rate{

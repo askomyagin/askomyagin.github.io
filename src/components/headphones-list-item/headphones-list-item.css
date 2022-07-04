@@ -131,3 +131,8 @@ button.buy{
     outline:none;
     border:none; 
 }
+
+.headphone-title:hover{
+    color: #838383;
+    text-decoration: underline;
+}

@@ -27,6 +27,14 @@ const fetchHeadphones = (HeadphonesStoreService, dispatch) => () => {
         .catch((err) => dispatch(headphonesError(err)));
 };
 
+const fetchHeadphone = (HeadphonesStoreService, dispatch, headphoneid) => () => {
+
+    dispatch(headphonesRequested());
+    HeadphonesStoreService.getHeadphones(headphoneid)
+        .then((data)=>dispatch(headphonesLoaded(data)))
+        .catch((err) => dispatch(headphonesError(err)));
+};
+
 const headphonesAddedToCart = (headphonesId) => {
     return{
         type: 'HEADPHONES_ADDED_TO_CART',
@@ -64,6 +72,7 @@ const headphonesRemovedFromFavorite = (headphonesId) => {
 
 export {
     fetchHeadphones,
+    fetchHeadphone,
     headphonesAddedToCart,
     headphonesRemovedFromCart,
     allHeadphonesRemovedFromCart,

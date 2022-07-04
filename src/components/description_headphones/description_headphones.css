@@ -1,0 +1,6 @@
+.list-main{
+    width: 1110px;
+    padding: 0;
+    margin: auto;
+    min-height:calc(100vh - 149px - 60px)
+}

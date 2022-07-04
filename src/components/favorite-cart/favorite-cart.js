@@ -41,9 +41,11 @@ const FavoriteCart = ({items, onDeleteFromFavorite, onAddedToCart}) => {
         <img src={images[img]} alt={img}/>
       </div>
       <div className="description-favorite-cart-item">
-        <div className="title-favorite-item">
-          {title}
-        </div>
+        <Link to={`/description/${id}/`} style={{ textDecoration: 'none' }}>
+          <div className="title-favorite-item">
+            {title}
+          </div>
+        </Link>
         <div className="favorite-rate-and-price">
           <div className="headphone-favorite-rate">
               <div className="rate-favorite-item-vector">
