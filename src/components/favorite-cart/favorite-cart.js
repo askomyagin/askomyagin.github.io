@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { headphonesRemovedFromFavorite, headphonesAddedToCart } from "../../actions";
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -13,7 +13,7 @@ const FavoriteCart = ({items, onDeleteFromFavorite, onAddedToCart}) => {
     return images;
   }
         
-    const images = importAll(require.context('/src/image', false, /\.(png|jpe?g|svg)$/));
+  const images = importAll(require.context('/src/image', false, /\.(png|jpe?g|svg)$/));
 
   const renderFavoriteCard = (item) => {
 
@@ -34,6 +34,7 @@ const FavoriteCart = ({items, onDeleteFromFavorite, onAddedToCart}) => {
   const { id, discount, img, oldprice, price, rate, title} = item;
   const oldprice_new = makePrice(oldprice);
   const discount_new = makeDiscount(discount);
+
     
   return (
     <div className='favorite-card'>

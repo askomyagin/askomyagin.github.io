@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './order-list.css';
 import { connect } from 'react-redux';
+import { Helmet } from "react-helmet";
 
 
 
@@ -114,6 +115,7 @@ const OrderList = ({ items, total }) => {
                             </div>
                             <textarea rows="7" cols="50" name="comment"/>
                         </div>
+
                     </div>
                     <div className="button-container">
                         <button className="button-order">

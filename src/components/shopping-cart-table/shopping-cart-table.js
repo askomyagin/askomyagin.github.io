@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import './shopping-cart-table.css';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -14,6 +14,14 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
   }
   const images = importAll(require.context('/src/image', false, /\.(png|jpe?g|svg)$/));
   const [emptyShopOrder, setEmptyShopOrder] = useState(false); 
+
+  const handleModalOpen = useCallback(() => {
+    setEmptyShopOrder(true);
+    setTimeout(() => {
+      setEmptyShopOrder(false);
+    }, 3500);
+  }, []);
+
 
   const renderCard = (item) => {
     const { id, title, count, img, price, total } = item;
@@ -104,7 +112,7 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
             </Link>
             :
             <div>
-              <button className='place-order'  onClick={() => setEmptyShopOrder(true)}>
+              <button className='place-order'  onClick={handleModalOpen}>
                 <div className='text-place-order'>
                   Перейти к оформлению
                 </div>
