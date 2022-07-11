@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.45ff15b7.css",
-    "main.js": "/static/js/main.7b8e4646.js",
+    "main.css": "/static/css/main.54c759ce.css",
+    "main.js": "/static/js/main.fffa0f2a.js",
     "static/media/apple_earpods_in_case.png": "/static/media/apple_earpods_in_case.414acd75c5058abefea5.png",
     "static/media/borofone_bo4.png": "/static/media/borofone_bo4.ab08cc2d6de451e264b5.png",
     "static/media/Samsung-HS130-Blue.png": "/static/media/Samsung-HS130-Blue.628115fc9a9dded280b4.png",
@@ -14,11 +14,11 @@
     "static/media/apple_airpods.png": "/static/media/apple_airpods.f73b2c97425ad92df816.png",
     "static/media/apple_earpods.png": "/static/media/apple_earpods.598c09de9ebb1497f9ec.png",
     "index.html": "/index.html",
-    "main.45ff15b7.css.map": "/static/css/main.45ff15b7.css.map",
-    "main.7b8e4646.js.map": "/static/js/main.7b8e4646.js.map"
+    "main.54c759ce.css.map": "/static/css/main.54c759ce.css.map",
+    "main.fffa0f2a.js.map": "/static/js/main.fffa0f2a.js.map"
   },
   "entrypoints": [
-    "static/css/main.45ff15b7.css",
-    "static/js/main.7b8e4646.js"
+    "static/css/main.54c759ce.css",
+    "static/js/main.fffa0f2a.js"
   ]
 }
