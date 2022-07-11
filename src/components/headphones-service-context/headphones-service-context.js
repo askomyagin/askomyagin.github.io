@@ -1,11 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const {
-    Provider: HeadphonesServiceProvider,
-    Consumer: HeadphonesServiceConsumer
-} = React.createContext();
+const { Provider: HeadphonesServiceProvider, Consumer: HeadphonesServiceConsumer } =
+    React.createContext();
 
-export{
-    HeadphonesServiceProvider,
-    HeadphonesServiceConsumer
-};
+export { HeadphonesServiceProvider, HeadphonesServiceConsumer };

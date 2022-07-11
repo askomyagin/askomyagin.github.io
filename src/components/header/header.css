@@ -1,43 +1,39 @@
-.header{
-    width: 1135px;
+.header {
+    max-width: 1135px;
     height: 60px;
-    padding: 0;
-    margin: auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin: auto;
 }
-.header .title-site{
-    float: left;
-    padding-left:10px;
+.header .title-site {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 25px;
     line-height: 30px;
     color: #101010;
-    margin-right: 908px;
+    max-width: 100%;
 }
 
-.buttons-header{
+.buttons-header {
     display: flex;
     text-decoration: none;
+    min-width: 90px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-favourites{
-    margin-top: 20px;
-    margin-right: 20px;
-}
-
-.header-favourites img{
+.header-favourites img {
     position: relative;
 }
 
-.button-favourites-count{ 
+.button-favourites-count {
     z-index: 1;
     left: -8px;
     top: -8px;
 }
-.header-favourites span{
+.header-favourites span {
     position: relative;
     text-decoration: none;
     font-family: 'Montserrat';
@@ -46,37 +42,32 @@
     font-size: 15px;
     line-height: 18px;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.button-favourites-count-number{
+.button-favourites-count-number {
     z-index: 1;
     left: -21px;
     top: -13px;
 }
 
-.header-cart{
-    margin-top: 19px;
-
-}
-
-.header-cart img{
+.header-cart img {
     position: relative;
 }
 
-.button-cart-count{ 
-    z-index: 1;
-    left: -8px;
-    top: -12px
-}
-
-.button-cart-count-active{
+.button-cart-count {
     z-index: 1;
     left: -8px;
     top: -12px;
 }
 
-.header-cart span{
+.button-cart-count-active {
+    z-index: 1;
+    left: -8px;
+    top: -12px;
+}
+
+.header-cart span {
     position: relative;
     text-decoration: none;
     font-family: 'Montserrat';
@@ -85,10 +76,10 @@
     font-size: 15px;
     line-height: 18px;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.button-cart-count-number{
+.button-cart-count-number {
     z-index: 1;
     left: -22px;
     top: -16px;

@@ -1,18 +1,17 @@
-.list-main{
-    width: 1110px;
-    padding: 0;
+.list-main {
+    max-width: 1110px;
     margin: auto;
-    min-height:calc(100vh - 149px - 60px)
+    min-height: calc(100vh - 149px - 60px);
 }
 
-.headphones-list{
-    width: 1110px;
+.headphones-list {
+    max-width: 1110px;
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
-    margin: auto;
+    gap: 30px;
+    margin-bottom: 30px;
 }
-.type-headphones{
+.type-headphones {
     margin-bottom: 20px;
     width: 100%;
     font-family: 'Montserrat';
@@ -23,18 +22,10 @@
     color: #838383;
 }
 
-.headphones-list i:not(:nth-child(3n)){
-    margin-right: 30px;
-}
-
-.headphones-list i{
-    margin-bottom: 30.65px;
-}
-
-.spinner-container{
+.spinner-container {
     width: 1110px;
-    margin: auto;       
+    margin: auto;
     display: flex;
-    align-items: center;             
-    min-height:calc(100vh - 149px - 60px);
+    align-items: center;
+    min-height: calc(100vh - 149px - 60px);
 }

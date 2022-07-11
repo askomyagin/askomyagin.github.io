@@ -1,5 +1,3 @@
-import withHeadphonesService from "./with-headphones-service";
+import withHeadphonesService from './with-headphones-service';
 
-export{
-    withHeadphonesService
-};
+export { withHeadphonesService };

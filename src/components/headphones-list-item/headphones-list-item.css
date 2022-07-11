@@ -1,37 +1,37 @@
-.headphone-list-item{
+.headphone-list-item {
     width: 350px;
     height: 407px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;   
+    border-radius: 30px;
     display: block;
 }
 
-.headphone-image{
+.headphone-image {
     width: 219.61px;
     height: 237.07px;
     padding-top: 15px;
     margin: auto;
 }
 
-.information-sale{
+.information-sale {
     margin-top: 55px;
     display: block;
 }
 
-.headphone-title{
+.headphone-title {
     width: 170px;
     min-height: 60px;
-    float:left;
-    margin-left:22px;
+    float: left;
+    margin-left: 22px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
     line-height: 21px;
-    color: #1C1C27;
+    color: #1c1c27;
 }
-.headphone-discount{
+.headphone-discount {
     float: right;
     font-family: 'Montserrat';
     font-style: normal;
@@ -40,12 +40,12 @@
     font-size: 16.2934px;
     line-height: 20px;
 
-    color: #DF6464;
+    color: #df6464;
 }
 
-.headphone-price{
+.headphone-price {
     text-align: right;
-    float:right;
+    float: right;
     width: 80px;
     margin-right: 21px;
     font-family: 'Montserrat';
@@ -53,12 +53,12 @@
     font-weight: 600;
     font-size: 17px;
     line-height: 21px;
-    color: #FFA542;
+    color: #ffa542;
 }
 
-.price-with-discount{
+.price-with-discount {
     text-align: right;
-    float:right;
+    float: right;
     width: 80px;
     margin-right: 21px;
     font-family: 'Montserrat';
@@ -66,10 +66,10 @@
     font-weight: 600;
     font-size: 19.1687px;
     line-height: 23px;
-    color: #DF6464;
+    color: #df6464;
 }
 
-.headphone-old-price{
+.headphone-old-price {
     width: 130px;
     text-align: right;
     float: right;
@@ -80,24 +80,24 @@
     font-size: 13px;
     line-height: 16px;
     text-decoration-line: line-through;
-    color: #FFCE7F;
+    color: #ffce7f;
     height: 16px;
 }
 
-.headphone-rate{
+.headphone-rate {
     width: 200px;
-    margin-left:22px;
+    margin-left: 22px;
     float: left;
     display: flex;
 }
 
-.headphone-vector{
-    float:left;
-    color: #FFCE7F;
+.headphone-vector {
+    float: left;
+    color: #ffce7f;
     margin-right: 10px;
 }
 
-.headphone-rate-estimation{
+.headphone-rate-estimation {
     font-family: 'Montserrat';
     font-style: normal;
     padding-top: 3px;
@@ -107,16 +107,16 @@
     color: #838383;
 }
 
-.button-buy{
-    outline:none;
+.button-buy {
+    outline: none;
     float: right;
-    margin-right:18px;
+    margin-right: 18px;
 }
-button.buy{
+button.buy {
     cursor: pointer;
-    background-color: #FFFFFF;;
-    outline:none;
-    border:none; 
+    background-color: #ffffff;
+    outline: none;
+    border: none;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -125,14 +125,14 @@ button.buy{
     color: #010101;
 }
 
-.favorite{
+.favorite {
     cursor: pointer;
-    background-color: #FFFFFF;;
-    outline:none;
-    border:none; 
+    background-color: #ffffff;
+    outline: none;
+    border: none;
 }
 
-.headphone-title:hover{
+.headphone-title:hover {
     color: #838383;
     text-decoration: underline;
 }

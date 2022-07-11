@@ -1,3 +1,3 @@
-import HeadphonesListItem from "./headphones-list-item";
+import HeadphonesListItem from './headphones-list-item';
 
-export {HeadphonesListItem};
+export { HeadphonesListItem };

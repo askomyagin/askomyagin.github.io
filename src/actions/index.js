@@ -1,72 +1,69 @@
 const headphonesRequested = () => {
-    return{
-        type: 'FETCH_HEADPHONES_REQUEST'
+    return {
+        type: 'FETCH_HEADPHONES_REQUEST',
     };
 };
 
 const headphonesLoaded = (newHeadphones) => {
-    return{
+    return {
         type: 'FETCH_HEADPHONES_SUCCESS',
-        payload: newHeadphones
+        payload: newHeadphones,
     };
 };
 
 const headphonesError = (error) => {
-    return{
+    return {
         type: 'FETCH_HEADPHONES_FAILURE',
-        payload: error
-    }
-}
+        payload: error,
+    };
+};
 
 const fetchHeadphones = (HeadphonesStoreService, dispatch) => () => {
-
     dispatch(headphonesRequested());
 
     HeadphonesStoreService.getHeadphones()
-        .then((data)=>dispatch(headphonesLoaded(data)))
+        .then((data) => dispatch(headphonesLoaded(data)))
         .catch((err) => dispatch(headphonesError(err)));
 };
 
 const fetchHeadphone = (HeadphonesStoreService, dispatch, headphoneid) => () => {
-
     dispatch(headphonesRequested());
     HeadphonesStoreService.getHeadphones(headphoneid)
-        .then((data)=>dispatch(headphonesLoaded(data)))
+        .then((data) => dispatch(headphonesLoaded(data)))
         .catch((err) => dispatch(headphonesError(err)));
 };
 
 const headphonesAddedToCart = (headphonesId) => {
-    return{
+    return {
         type: 'HEADPHONES_ADDED_TO_CART',
-        payload: headphonesId
+        payload: headphonesId,
     };
 };
 
 const headphonesRemovedFromCart = (headphoneId) => {
-    return{
+    return {
         type: 'HEADPHONES_REMOVED_FROM_CART',
-        payload: headphoneId
+        payload: headphoneId,
     };
 };
 
-const allHeadphonesRemovedFromCart = (headphoneId) => {
-    return{
+const allHeadphonesRemovedFromCart = () => {
+    return {
         type: 'ALL_HEADPHONES_REMOVED_FROM_CART',
-        payload: headphoneId
     };
 };
 
 const headphonesAddedToFavorite = (headphoneId) => {
-    return{
+    return {
         type: 'HEADPHONES_ADDED_TO_FAVORITE',
-        payload: headphoneId
+        payload: headphoneId,
     };
 };
 
 const headphonesRemovedFromFavorite = (headphonesId) => {
-    return{
+    return {
         type: 'HEADPHONES_REMOVED_FROM_FAVORITE',
-        payload: headphonesId
+        payload: headphonesId,
     };
 };
 
@@ -77,5 +74,5 @@ export {
     headphonesRemovedFromCart,
     allHeadphonesRemovedFromCart,
     headphonesAddedToFavorite,
-    headphonesRemovedFromFavorite
+    headphonesRemovedFromFavorite,
 };

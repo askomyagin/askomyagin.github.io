@@ -1,123 +1,123 @@
-.description-container-item-image{
+.description-container-item-image {
     width: 350px;
     height: 350px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;   
+    border-radius: 30px;
     margin-left: 20px;
 }
 
-.description-container{
+.description-container {
     width: 1110px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.description-item-image{
+.description-item-image {
     display: table-cell;
     height: 350px;
     text-align: center;
     width: 350px;
-    vertical-align: middle; 
+    vertical-align: middle;
 }
 
-.description-container{
+.description-container {
     display: flex;
 }
 
-.description-container-item-title{
+.description-container-item-title {
     width: 700px;
     height: 40px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;  
+    border-radius: 30px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    line-height: 30px; 
+    line-height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.title-specification-container{
+.title-specification-container {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.description-specifications{
+.description-specifications {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
     width: 700px;
     height: 290px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;  
+    border-radius: 30px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    line-height: 30px; 
+    line-height: 30px;
 }
-.description-specifications-title{
+.description-specifications-title {
     width: 700px;
     text-align: center;
     margin-top: 10px;
 }
 
-.description-brief-characteristics{
+.description-brief-characteristics {
     width: 700px;
     height: 180px;
     display: flex;
     justify-content: center;
 }
 
-.description-rus-characteristics{
+.description-rus-characteristics {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 30px; 
+    line-height: 30px;
     width: 250px;
     display: flex;
     flex-direction: column;
 }
-.description-characteristics{
+.description-characteristics {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 30px; 
+    line-height: 30px;
     width: 250px;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
 }
 
-.description_all_characteristics{
+.description_all_characteristics {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    line-height: 30px; 
-    margin:auto;
-    border: none; 
+    line-height: 30px;
+    margin: auto;
+    border: none;
     outline: none;
-    background-color:#FFFFFF;
-    cursor:pointer;
+    background-color: #ffffff;
+    cursor: pointer;
 }
 
-.description_all_characteristics:hover{
+.description_all_characteristics:hover {
     color: #838383;
     text-decoration: underline;
 }
 
-.about-product-favorite-buy-container{
+.about-product-favorite-buy-container {
     width: 1070px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     margin: auto;
@@ -127,93 +127,93 @@
     margin-bottom: 20px;
 }
 
-.about-product-container{
+.about-product-container {
     width: 550px;
     margin-bottom: 20px;
     margin-top: 30px;
 }
-.about-product-title{
+.about-product-title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    line-height: 30px; 
+    line-height: 30px;
     margin-bottom: 20px;
 }
 
-.description-about-product{
+.description-about-product {
     margin-bottom: 15px;
 }
 
-.favorite-buy-container{
+.favorite-buy-container {
     margin-left: 30px;
     width: 400px;
     margin-top: 30px;
 }
 
-.description-price-container{
+.description-price-container {
     width: 250px;
     height: 100px;
     border-radius: 20px;
-    border: 2px solid #D4D4D4;
-    margin:auto;
+    border: 2px solid #d4d4d4;
+    margin: auto;
     margin-top: 20px;
 }
 
-.description-with-discount-container{
+.description-with-discount-container {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.description-with-discount{
+.description-with-discount {
     display: flex;
     align-items: center;
 }
 
-.description-headphone-discount{
+.description-headphone-discount {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 20px;
-    color: #DF6464;
+    color: #df6464;
     margin-left: 20px;
 }
 
-.description-price-with-discount{
+.description-price-with-discount {
     text-align: center;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
     line-height: 25px;
-    color: #DF6464;
+    color: #df6464;
 }
 
-.description-headphone-price{
+.description-headphone-price {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
     line-height: 30px;
-    color: #FFA542;
+    color: #ffa542;
 }
 
-.description-headphone-old-price{
+.description-headphone-old-price {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
     line-height: 16px;
     text-decoration-line: line-through;
-    color: #FFCE7F;
+    color: #ffce7f;
 }
 
-.description-place-order{
+.description-place-order {
     cursor: pointer;
     width: 150px;
     height: 45px;
@@ -223,7 +223,7 @@
     margin-left: 15px;
 }
 
-.description-buy-favorite{
+.description-buy-favorite {
     display: flex;
     align-items: center;
     width: 400px;

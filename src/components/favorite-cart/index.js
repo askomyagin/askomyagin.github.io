@@ -1,3 +1,3 @@
-import FavoriteCart from "./favorite-cart";
+import FavoriteCart from './favorite-cart';
 
 export default FavoriteCart;

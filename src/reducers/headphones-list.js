@@ -1,32 +1,31 @@
 const updateHeadphonesList = (state, action) => {
-
-    if (state === undefined){
+    if (state === undefined) {
         return {
             headphones: [],
             loading: true,
-            error: null
+            error: null,
         };
     }
-    switch(action.type){
+    switch (action.type) {
         case 'FETCH_HEADPHONES_REQUEST':
-            return{
+            return {
                 headphones: [],
-                loading:true,
+                loading: true,
                 error: null,
             };
         case 'FETCH_HEADPHONES_SUCCESS':
-            return{
+            return {
                 headphones: action.payload,
                 loading: false,
-                error: null
+                error: null,
             };
         case 'FETCH_HEADPHONES_FAILURE':
-            return{
+            return {
                 headphones: [],
                 loading: false,
-                error: action.payload
+                error: action.payload,
             };
-        default: 
+        default:
             return state.HeadphonesList;
     }
 };

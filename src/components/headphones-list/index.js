@@ -1,3 +1,3 @@
-import HeadphonesList from "./headphones-list";
+import HeadphonesList from './headphones-list';
 
 export default HeadphonesList;

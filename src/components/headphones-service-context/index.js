@@ -1,6 +1,3 @@
-import { HeadphonesServiceConsumer, HeadphonesServiceProvider} from "./headphones-service-context";
+import { HeadphonesServiceConsumer, HeadphonesServiceProvider } from './headphones-service-context';
 
-export{
-    HeadphonesServiceConsumer,
-    HeadphonesServiceProvider
-};
+export { HeadphonesServiceConsumer, HeadphonesServiceProvider };
