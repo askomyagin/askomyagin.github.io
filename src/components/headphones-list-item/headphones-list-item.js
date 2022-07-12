@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import './headphones-list-item.css';
+import AlertPurchased from '../alert-purchased';
 
 const HeadphonesListItem = ({
     headphone,
@@ -11,12 +12,21 @@ const HeadphonesListItem = ({
 }) => {
     const { id, img, title, discount, oldprice, price, rate } = headphone;
 
+    const [showAlert, setShowAlert] = useState(false);
+
     function makePrice(price) {
         if (price !== '') {
             price += '₽';
         }
         return price;
     }
+
+    const handleModalOpen = useCallback(() => {
+        setShowAlert(true);
+        setTimeout(() => {
+            setShowAlert(false);
+        }, 2000);
+    }, []);
 
     function makeDiscount(discount) {
         if (discount !== '') {
@@ -78,10 +88,17 @@ const HeadphonesListItem = ({
                 </div>
                 <div className="button-buy">
                     {renderFavorite(favoriteFlag)}
-                    <button className="buy" type="submit" onClick={onAddedToCart}>
+                    <button
+                        className="buy"
+                        onClick={() => {
+                            handleModalOpen();
+                            onAddedToCart();
+                        }}
+                    >
                         <span>Купить</span>
                     </button>
                 </div>
+                {showAlert && AlertPurchased()}
             </div>
         </div>
     );

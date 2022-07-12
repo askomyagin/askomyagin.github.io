@@ -20,7 +20,9 @@ const updateShoppingCart = (state, action) => {
                 orderTotal: 0,
                 count: 0,
             };
-
+        case 'ALL_HEADPHONE_REMOVED_FROM_CART':
+            const item = state.shoppingCart.cartItems.find(({ id }) => id === action.payload);
+            return updateOrder(state, action.payload, -item.count);
         default:
             return state.shoppingCart;
     }

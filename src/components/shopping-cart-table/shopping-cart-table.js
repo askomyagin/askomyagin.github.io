@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import {
     headphonesRemovedFromCart,
     headphonesAddedToCart,
-    allHeadphonesRemovedFromCart,
+    allHeadphoneRemovedFromCart,
 } from '../../actions';
 
 const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
@@ -144,7 +144,7 @@ const mapStateToProps = ({ shoppingCart: { cartItems, orderTotal } }) => {
 const mapDispatchToProps = {
     onIncrease: headphonesAddedToCart,
     onDecrease: headphonesRemovedFromCart,
-    onDelete: allHeadphonesRemovedFromCart,
+    onDelete: allHeadphoneRemovedFromCart,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCartTable);

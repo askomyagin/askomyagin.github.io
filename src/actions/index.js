@@ -53,6 +53,13 @@ const allHeadphonesRemovedFromCart = () => {
     };
 };
 
+const allHeadphoneRemovedFromCart = (headphoneId) => {
+    return {
+        type: 'ALL_HEADPHONE_REMOVED_FROM_CART',
+        payload: headphoneId,
+    };
+};
+
 const headphonesAddedToFavorite = (headphoneId) => {
     return {
         type: 'HEADPHONES_ADDED_TO_FAVORITE',
@@ -75,4 +82,5 @@ export {
     allHeadphonesRemovedFromCart,
     headphonesAddedToFavorite,
     headphonesRemovedFromFavorite,
+    allHeadphoneRemovedFromCart,
 };
